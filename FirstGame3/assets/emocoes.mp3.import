@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/emocoes.mp3-9d813e6e75ae591921ce1cedc0d652e5.mp3str"
+
+[deps]
+
+source_file="res://assets/emocoes.mp3"
+dest_files=[ "res://.import/emocoes.mp3-9d813e6e75ae591921ce1cedc0d652e5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

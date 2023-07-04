@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/background.png" type="Texture" id=1]
+[ext_resource path="res://assets/source/UserInterface/Quit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/source/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/source/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/font_default.tres" type="DynamicFont" id=5]
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 4.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.0
+margin_bottom = -3.0
+texture = ExtResource( 1 )
+expand = true
+flip_h = true
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+anchor_bottom = 0.0
+margin_left = -128.0
+margin_top = 244.0
+margin_right = 129.0
+margin_bottom = 285.0
+custom_fonts/font = ExtResource( 5 )
+text = "GODOT First Game"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -177.0
+margin_top = 418.0
+margin_right = 128.0
+margin_bottom = 586.0
+
+[node name="Play" parent="Menu" instance=ExtResource( 4 )]
+custom_fonts/font = ExtResource( 5 )
+text = "Play"
+next_scene_path = " res://assets/source/Levels/LevelTemplate.tscn"
+
+[node name="Quit" parent="Menu" instance=ExtResource( 2 )]
+custom_fonts/font = ExtResource( 5 )
+text = "Quit"
